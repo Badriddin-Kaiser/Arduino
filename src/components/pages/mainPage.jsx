@@ -1,6 +1,7 @@
 import "./mainPage.css";
 import { useState } from "react";
 import Boards from "./BoardPage";
+import SensorsPage from "./SensorsPage";
 function MainPage() {
   const [page, setPage] = useState("home");
 
@@ -153,7 +154,7 @@ function MainPage() {
       {/* OTHER PAGES */}
       
       {page === "boards" && <Boards />}
-      {page === "sensors" && <h1 style={{ padding: "50px" }}>Sensors Page</h1>}
+      {page === "sensors" && <SensorsPage />}
       {page === "modules" && <h1 style={{ padding: "50px" }}>Modules Page</h1>}
       {page === "projects" && <h1 style={{ padding: "50px" }}>Projects Page</h1>}
       {page === "about" && <h1 style={{ padding: "50px" }}>About Page</h1>}
