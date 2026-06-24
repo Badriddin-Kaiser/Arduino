@@ -1,31 +1,29 @@
-.sensors-page {
+.modules-page {
   padding: 40px;
   text-align: center;
   color: white;
   background: #0b0f19;
   min-height: 100vh;
 }
-
-.sensors-title {
+ 
+.modules-title {
   font-size: 36px;
   color: #00e0ff;
   margin-bottom: 10px;
 }
-
-.sensors-subtitle {
+ 
+.modules-subtitle {
   opacity: 0.7;
   margin-bottom: 30px;
 }
-
-/* GRID ВМЕСТО FLEX */
-.sensors-grid {
+ 
+.modules-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
-
-/* CARD */
-.sensors-card {
+ 
+.modules-card {
   background: rgba(17, 24, 39, 0.75);
   border-radius: 15px;
   padding: 15px;
@@ -34,33 +32,30 @@
   backdrop-filter: blur(8px);
   cursor: pointer;
 }
-
-/* HOVER УЛУЧШЕННЫЙ */
-.sensors-card:hover {
+ 
+.modules-card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 10px 35px rgba(0, 224, 255, 0.25);
   border-color: rgba(0, 224, 255, 0.5);
 }
-
-/* IMAGE */
-.sensors-img-box img {
+ 
+.modules-img-box img {
   width: 100%;
   height: 140px;
   object-fit: contain;
   transition: 0.3s ease;
 }
-
-.sensors-card:hover img {
+ 
+.modules-card:hover img {
   transform: scale(1.05);
 }
-
-/* TEXT */
-.sensors-card h3 {
+ 
+.modules-card h3 {
   margin: 10px 0 5px;
   font-size: 18px;
 }
-
-.sensors-card p {
+ 
+.modules-card p {
   margin: 0;
   opacity: 0.7;
   font-size: 14px;

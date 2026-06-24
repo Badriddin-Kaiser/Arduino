@@ -1,10 +1,13 @@
 .boards-page {
-  padding: 50px clamp(16px, 5vw, 80px);
+  padding: 40px;
   color: white;
+  text-align:center;
+  background:#0b0f19;
 }
 
 .boards-title {
   font-size: 38px;
+  color:#00e0ff;
   margin-bottom: 10px;
 }
 

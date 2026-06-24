@@ -6,22 +6,22 @@ function Board () {
   const boardsData = [
     {
       name: "Arduino Uno",
-      desc: "Самая популярная плата для начинающих",
+      desc: "Most popular board for beginners",
       img: "/img/Arduino uno2.jpg"
     },
     {
       name: "Arduino Nano",
-      desc: "Компактная версия Uno",
+      desc: "Compact version of Uno",
       img: "/img/Arduino nano2.jpg"
     },
     {
       name: "Arduino Mega",
-      desc: "Много пинов для больших проектов",
+      desc: "Many pins for large projects",
       img: "/img/Arduino mega.jpg"
     },
     {
       name: "ESP32",
-      desc: "WiFi + Bluetooth мощная плата",
+      desc: "WiFi + Bluetooth powerful board",
       img: "/img/esp32.jpg"
     }
   ];

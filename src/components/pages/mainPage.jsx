@@ -2,6 +2,7 @@ import "./mainPage.css";
 import { useState } from "react";
 import Boards from "./BoardPage";
 import SensorsPage from "./SensorsPage";
+import ModulesPage from "./ModulesPage";
 function MainPage() {
   const [page, setPage] = useState("home");
 
@@ -10,7 +11,9 @@ function MainPage() {
 
       {/* NAVBAR */}
       <div className="navbar">
-        <div className="logo">ITCC Arduino</div>
+        <div className="logo" onClick={() => setPage("home")} style={{ cursor: "pointer" }}>
+  ITCC Arduino
+</div>
         <div className="menu">
          <span className={page === "home" ? "active" : ""} onClick={() => setPage("home")}>Home</span>
           <span className={page === "boards" ? "active" : ""} onClick={() => setPage("boards")}>Boards</span>
@@ -155,7 +158,7 @@ function MainPage() {
       
       {page === "boards" && <Boards />}
       {page === "sensors" && <SensorsPage />}
-      {page === "modules" && <h1 style={{ padding: "50px" }}>Modules Page</h1>}
+      {page === "modules" && <ModulesPage/>}
       {page === "projects" && <h1 style={{ padding: "50px" }}>Projects Page</h1>}
       {page === "about" && <h1 style={{ padding: "50px" }}>About Page</h1>}
     

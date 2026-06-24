@@ -8,18 +8,10 @@ function Footer() {
 
         {/* LEFT */}
         <div className="footer-col">
-          <h2 className="footer-logo">ITCC Arduino</h2>
+<h2 className="footer-logo">ITCC Arduino</h2>
           <p>Learn Arduino the easy way. Build, explore and create projects.</p>
         </div>
 
-        {/* LINKS */}
-        <div className="footer-col">
-          <h4>Navigation</h4>
-          <p>Home</p>
-          <p>Boards</p>
-          <p>Sensors</p>
-          <p>Modules</p>
-        </div>
 
         {/* RESOURCES */}
         <div className="footer-col">

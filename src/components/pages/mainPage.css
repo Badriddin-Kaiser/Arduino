@@ -36,6 +36,13 @@ img {
   margin-left: 20px;
   opacity: 0.6;
   cursor: pointer;
+  transition: 0.3s; /* ✅ добавлен transition */
+}
+
+/* ✅ ИСПРАВЛЕНИЕ 1: добавлен hover на меню */
+.menu span:hover {
+  opacity: 1;
+  color: #00e0ff;
 }
 
 .menu .active {
@@ -60,8 +67,8 @@ img {
   display: flex;
   align-items: center;
 
-  justify-content: space-between; /* РАЗДЕЛЯЕТ */
-  gap: 100px; /* расстояние между текстом и картинкой */
+  justify-content: space-between;
+  gap: 100px;
 }
 
 .hero-text {
@@ -85,8 +92,10 @@ img {
   opacity: 0.7;
 }
 
+/* ✅ ИСПРАВЛЕНИЕ 2: добавлен position: relative для псевдоэлемента */
 .hero-image {
   margin-left: auto;
+  position: relative;
 }
 
 .hero-image img {
@@ -144,16 +153,13 @@ img {
   padding: 0 clamp(16px, 5vw, 80px);
 }
 
-/* CARDS */
+/* ✅ ИСПРАВЛЕНИЕ 3: убрано дублирование .cards, объединено в один блок */
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 25px;
-  padding: 40px 80px;
-}
 
-.cards {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 40px;
