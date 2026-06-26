@@ -74,7 +74,7 @@ function MainPage() {
 
             <div className="card big">
               <img
-                src="img/Sensors kit.jpg"
+                src="img/sensors-kit.jpg"
                 alt="Sensors kit"
                 onError={(e) => {
                   e.target.src = "https://images.unsplash.com/photo-1581092160607-ee22621dd758";
