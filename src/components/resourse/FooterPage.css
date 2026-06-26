@@ -1,83 +1,131 @@
-/* =========================
-   1. FOOTER ОБЩИЙ КОНТЕЙНЕР
-========================= */
 .footer {
-  margin-top: 80px;              /* отступ от основного контента сверху */
-  background: #020617;           /* тёмный фон футера */
-  border-top: 1px solid rgba(0,224,255,0.2); /* светящаяся линия сверху */
-  padding: 50px 80px 20px;       /* внутренние отступы */
+  background: linear-gradient(to top, #010409, #020617);
+  border-top: 1px solid rgba(0, 224, 255, 0.2);
+  padding: 30px 60px;
+  box-shadow: 0 -4px 30px rgba(0, 224, 255, 0.05);
 }
 
-
-/* =========================
-   2. КОНТЕЙНЕР КОЛОНОК (GRID)
-========================= */
 .footer-container {
-  display: flex;                 /* делаем строки гибкими */
-  flex-wrap: wrap;               /* перенос при узком экране */
-  justify-content: space-between;/* равномерное распределение */
-  gap: 40px;                     /* расстояние между колонками */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-
-/* =========================
-   3. ОДНА КОЛОНКА
-========================= */
-.footer-col {
-  flex: 1 1 200px;               /* адаптив: минимум 200px */
+.footer-left {
+  display: flex;
+  flex-direction: column;
 }
 
-
-/* =========================
-   4. ЛОГО / НАЗВАНИЕ
-========================= */
-.footer-logo {
-  color: #00e0ff;                /* неоновый цвет */
-  font-size: 22px;               /* размер текста */
-  margin-bottom: 10px;           /* отступ вниз */
+.footer-logos {
+  justify-content: center;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
 }
 
-
-/* =========================
-   5. ЗАГОЛОВКИ КОЛОНОК
-========================= */
-.footer-col h4 {
-  margin-bottom: 10px;           /* отступ под заголовком */
+.footer-logo-img  {
+  justify-content: center;
+  height:   50px;
+  width:   50px;
+  object-fit: contain;
+  background: white;
+  border-radius: 8px;
 }
 
-
-/* =========================
-   6. ТЕКСТ / ССЫЛКИ
-========================= */
-.footer-col p {
-  opacity: 0.7;                  /* приглушенный текст */
-  margin: 6px 0;                 /* расстояние между строками */
-  cursor: pointer;               /* курсор как ссылка */
+.footer-logo-img2 {
+  height:  50px;
+  width: 50px;
+  object-fit: contain;
+  background: white;
+  border-radius: 8px;
+  padding: 2px;
 }
 
-
-/* =========================
-   7. ХОВЕР ЭФФЕКТ
-========================= */
-.footer-col p:hover {
-  color: #00e0ff;                /* подсветка при наведении */
+.footer-highlight {
+  color: #00e0ff;
+  font-weight: 900;
+  text-shadow: 0 0 10px rgba(0, 224, 255, 0.4);
 }
 
-
-/* =========================
-   8. НИЖНЯЯ ЧАСТЬ (COPYRIGHT)
-========================= */
-.footer-bottom {
-  text-align: center;            /* по центру */
-  margin-top: 40px;              /* отступ сверху */
-  font-size: 14px;               /* мелкий текст */
-  color: rgba(255, 255, 255, 0.5); /* приглушённый */
+.footer-bold {
+  font-weight: 900;
+  color: white;
 }
 
+/* CENTER */
+.footer-center {
+  display: flex;
+  gap: 30px;
+}
 
-/* =========================
-   9. ДОПОЛНИТЕЛЬНЫЙ ТЕКСТ
-========================= */
-.footer-bottom2 {
-  color: rgba(2, 6, 23, 0.4);    /* почти невидимый текст */
+.footer-center span {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.footer-center span::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #00e0ff;
+  transition: 0.3s;
+}
+
+.footer-center span:hover {
+  color: #00e0ff;
+}
+
+.footer-center span:hover::after {
+  width: 100%;
+}
+
+/* RIGHT - SOCIAL */
+.footer-right {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-right a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 224, 255, 0.15);
+  background: rgba(0, 224, 255, 0.05);
+}
+
+.footer-right a:hover {
+  color: #00e0ff;
+  border-color: rgba(0, 224, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 224, 255, 0.2);
+  background: rgba(0, 224, 255, 0.1);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-center {
+    gap: 20px;
+  }
+
+  .footer {
+    padding: 30px 20px;
+  }
 }
