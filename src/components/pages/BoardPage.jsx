@@ -7,22 +7,22 @@ function Board () {
     {
       name: "Arduino Uno",
       desc: "Most popular board for beginners",
-      img: "/img/Arduino uno2.jpg"
+      img: "img/Arduino uno2.jpg"
     },
     {
       name: "Arduino Nano",
       desc: "Compact version of Uno",
-      img: "/img/Arduino nano2.jpg"
+      img: "img/Arduino nano2.jpg"
     },
     {
       name: "Arduino Mega",
       desc: "Many pins for large projects",
-      img: "/img/Arduino mega.jpg"
+      img: "img/Arduino mega.jpg"
     },
     {
       name: "ESP32",
       desc: "WiFi + Bluetooth powerful board",
-      img: "/img/esp32.jpg"
+      img: "img/esp32.jpg"
     }
   ];
 

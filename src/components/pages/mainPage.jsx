@@ -45,7 +45,7 @@ function MainPage() {
 
             <div className="hero-image">
               <img
-                src="/img/arduino-uno.jpg"
+                src="img/arduino-uno.jpg"
                 alt="Arduino"
                 onError={(e) => {
                   e.target.src = "https://images.unsplash.com/photo-1518770660439-4636190af475";
@@ -63,7 +63,7 @@ function MainPage() {
             onClick={() => setPage("boards")}
             >
               <img
-                src="/img/arduino-uno-and-nano.jpg"
+                src="img/arduino-uno-and-nano.jpg"
                 alt="Arduino boards"
                 onError={(e) => {
                   e.target.src = "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc";
@@ -74,7 +74,7 @@ function MainPage() {
 
             <div className="card big">
               <img
-                src="/img/Sensors kit.jpg"
+                src="img/Sensors kit.jpg"
                 alt="Sensors kit"
                 onError={(e) => {
                   e.target.src = "https://images.unsplash.com/photo-1581092160607-ee22621dd758";
@@ -86,7 +86,7 @@ function MainPage() {
 
             <div className="card big">
               <img
-                src="/img/modules-guide.jpg"
+                src="img/modules-guide.jpg"
                 alt="Modules"
                 onError={(e) => {
                   e.target.src = "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc";
@@ -105,7 +105,7 @@ function MainPage() {
 
             <div className="card small">
               <img
-                src="/img/KY-001.jpg"
+                src="img/KY-001.jpg"
                 alt="KY-001"
                 onError={(e) => {
                   e.target.src = "https://images.unsplash.com/photo-1581092160607-ee22621dd758";
@@ -117,10 +117,10 @@ function MainPage() {
 
             <div className="card small">
               <img
-                src="/img/KY-004.jpg"
+                src="img/KY-004.jpg"
                 alt="Button"
                 onError={(e) => {
-                  e.target.src = "KY-004";
+                  e.target.src = "https://images.unsplash.com/photo-1581092160607-ee22621dd758";
                 }}
               />
               <h4>KY-004</h4>
@@ -129,9 +129,10 @@ function MainPage() {
 
             <div className="card small">
               <img
-                src="/img/HC-SR04.jpg"
+                src="img/HC-SR04.jpg"
+                alt="HC-SR04"
                 onError={(e) => {
-                  e.target.src = "HR-SR04";
+                  e.target.src = "https://images.unsplash.com/photo-1581092160607-ee22621dd758";
                 }}
               />
               <h4>HC-SR04</h4>
@@ -140,10 +141,10 @@ function MainPage() {
 
             <div className="card small">
               <img
-                src="/img/servo-motor.jpg"
+                src="img/servo-motor.jpg"
                 alt="Servo"
                 onError={(e) => {
-                  e.target.src = "Servo motor";
+                  e.target.src = "https://images.unsplash.com/photo-1581092160607-ee22621dd758";
                 }}
               />
               <h4>Servo Motor</h4>
