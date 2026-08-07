@@ -12,8 +12,8 @@ function Footer() {
     <span className="footer-highlight">Tajik-Korean</span> IT Communication Center (<span className="footer-bold">WTIT/TUT</span>)
   </span>
   <div className="footer-logos">
-    <img src="/img/WTIT.jpg" alt="WTIT" className="footer-logo-img" />
-    <img src="/img/TUT.jpg" alt="TUT" className="footer-logo-img2" />
+    <img src="/img/WTIT.jpg" />
+    <img src="/Arduino/img/WTIT.jpg" />
   </div>
 </div>
 
