@@ -1,15 +1,11 @@
-import MainPage from './components/pages/mainPage'
-import './App.css'
-import Footer from "./components/resourse/FooterPage";
-
+import MainPage from "./components/pages/MainPage";
 
 function App() {
   return (
-    <>
-      <MainPage/>
-      <Footer/>
-    </>
-  )
+    <div className="app-container">
+      <MainPage />
+    </div>
+  );
 }
 
-export default App
+export default App;

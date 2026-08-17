@@ -1,13 +1,25 @@
+/* 1. КОНТЕЙНЕР СТРАНИЦЫ */
 .sensors-page {
-  padding: 40px;
-  text-align: center;
-  color: white;
-  background: #0b0f19;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Толкает футер на самый низ */
+  background-color: #0b0f19;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 2. ОБОЛОЧКА КОНТЕНТА (Широкая сетка + воздух над футером) */
+.sensors-main-content {
+  padding: 40px 40px 80px 40px; /* 80px снизу создают красивый отступ над футером */
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .sensors-title {
-  font-size: 36px;
+  font-size: 38px;
   color: #00e0ff;
   margin-bottom: 10px;
 }
@@ -17,32 +29,32 @@
   margin-bottom: 30px;
 }
 
-/* GRID ВМЕСТО FLEX */
+/* GRID */
 .sensors-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 25px;
+  width: 100%;
 }
 
 /* CARD */
 .sensors-card {
   background: rgba(17, 24, 39, 0.75);
   border-radius: 15px;
-  padding: 15px;
+  padding: 20px;
   border: 1px solid rgba(0, 224, 255, 0.15);
   transition: all 0.3s ease;
   backdrop-filter: blur(8px);
   cursor: pointer;
+  text-align: center;
 }
 
-/* HOVER УЛУЧШЕННЫЙ */
 .sensors-card:hover {
-  transform: translateY(-10px) scale(1.03);
+  transform: translateY(-10px) scale(1.02);
   box-shadow: 0 10px 35px rgba(0, 224, 255, 0.25);
   border-color: rgba(0, 224, 255, 0.5);
 }
 
-/* IMAGE */
 .sensors-img-box img {
   width: 100%;
   height: 140px;
@@ -54,9 +66,8 @@
   transform: scale(1.05);
 }
 
-/* TEXT */
 .sensors-card h3 {
-  margin: 10px 0 5px;
+  margin: 12px 0 6px;
   font-size: 18px;
 }
 
@@ -64,4 +75,203 @@
   margin: 0;
   opacity: 0.7;
   font-size: 14px;
+}
+
+/* MODAL BACKDROP */
+.sensors-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* MODAL CARD */
+.sensors-modal-card {
+  background-color: #0b0f19;
+  border: 1px solid rgba(0, 224, 255, 0.4);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  position: relative;
+  box-shadow: 0 0 35px rgba(0, 224, 255, 0.25);
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: left;
+  backdrop-filter: blur(12px);
+}
+
+.sensors-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #00e0ff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.sensors-modal-close:hover {
+  color: #ffffff;
+}
+
+/* LEFT COLUMN */
+.sensors-modal-left {
+  width: 250px;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(0, 224, 255, 0.2);
+  padding-right: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sensors-modal-img-box {
+  text-align: center;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sensors-modal-img-box img {
+  max-height: 110px;
+  object-fit: contain;
+}
+
+.sensors-modal-img-box h2 {
+  color: #00e0ff;
+  margin: 10px 0 0 0;
+  font-size: 22px;
+  text-align: center;
+}
+
+.sensors-specs-box {
+  background: rgba(17, 24, 39, 0.9);
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  border: 1px solid rgba(0, 224, 255, 0.15);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sensors-specs-title {
+  color: #00e0ff;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.sensors-spec-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.spec-label {
+  color: #9ca3af;
+}
+
+.spec-val {
+  color: #ffffff;
+}
+
+/* RIGHT COLUMN */
+.sensors-modal-right {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.sensors-modal-right::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sensors-modal-right::-webkit-scrollbar-thumb {
+  background: rgba(0, 224, 255, 0.3);
+  border-radius: 4px;
+}
+
+.sensors-sec {
+  margin-bottom: 16px;
+}
+
+.sensors-sec h3 {
+  color: #00e0ff;
+  font-size: 15px;
+  margin: 0 0 6px 0;
+}
+
+.sensors-sec p {
+  font-size: 13px;
+  color: #d1d5db;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* CODE BLOCK WITH SCROLLBAR */
+.sensors-code-block {
+  background: #05070e;
+  border: 1px solid rgba(0, 224, 255, 0.3);
+  padding: 12px;
+  border-radius: 8px;
+  color: #a5f3fc;
+  font-size: 12px;
+  font-family: monospace;
+  overflow-x: auto;
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #00eaff transparent;
+}
+
+.sensors-code-block::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sensors-code-block::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sensors-code-block::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00eaff, #0077ff);
+  border-radius: 10px;
+}
+
+.sensors-code-block::-webkit-scrollbar-thumb:hover {
+  background: #00eaff;
+}
+
+/* MOBILE ADAPTIVITY */
+@media (max-width: 768px) {
+  .sensors-modal-card {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .sensors-modal-left {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+    padding-right: 0;
+    padding-bottom: 15px;
+  }
 }
