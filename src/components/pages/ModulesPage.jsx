@@ -10,7 +10,7 @@ const modulesData = [
     desc: "Dual H-Bridge Motor Driver",
     img: "img/l298n.jpg",
     details: {
-      about:
+      about: 
         "The L298N is a high-power dual-channel motor driver designed for controlling DC and stepper motors.",
       specs: [
         { label: "Chip", val: "L298N" },
