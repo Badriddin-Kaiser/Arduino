@@ -1,10 +1,17 @@
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./components/pages/MainPage";
+import ModulesPage from "./components/pages/ModulesPage";
 
 function App() {
   return (
-    <div className="app-container">
-      <MainPage />
-    </div>
+    <Router>
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/modules" element={<ModulesPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
