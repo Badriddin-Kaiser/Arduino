@@ -1,6 +1,6 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import MainPage from "./Components/pages/MainPage";
-import ModulesPage from "./Components/pages/ModulesPage";
+import MainPage from "./components/pages/MainPage";
+import ModulesPage from "./components/pages/ModulesPage";
 
 function App() {
   return (
