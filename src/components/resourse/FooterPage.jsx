@@ -1,6 +1,6 @@
 import "./FooterPage.css";
 
-function Footer() {
+function FooterPage() {
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -15,14 +15,14 @@ function Footer() {
           <div className="footer-logos">
             <div className="tut-logo-container">
               <img
-                src="img/TUT.jpg"
+                src="./img/TUT.jpg"
                 alt="TUT Logo"
                 className="footer-logo-img"
               />
             </div>
             <div className="tut-logo-container">
               <img
-                src="img/WTIT.jpg"
+                src="./img/WTIT.jpg"
                 alt="WTIT Logo"
                 className="footer-logo-img2"
               />
@@ -79,4 +79,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default FooterPage;
